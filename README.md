@@ -13,7 +13,7 @@ X Vote Vault is a web application designed to simplify and secure the voting pro
 2. **Create a Poll**:
    - A form allows admins to set a **vote title** and add multiple options for voting.
    - New options can be added dynamically using the **Add Option** button.
-![image](https://github.com/user-attachments/assets/76b1a2b9-ff93-4791-913f-f7182e5280e6)
+![image](https://github.com/user-attachments/assets/f154d54d-36c2-45c4-8927-f01ce3a15b35)
 
 3. **Start a Poll**:
    - Once the poll is ready, the **Start Poll** button makes the poll live and accessible to users.
