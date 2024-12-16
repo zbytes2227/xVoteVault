@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# X Vote Vault
 
-## Getting Started
+X Vote Vault is a web application designed to simplify and secure the voting process. Built using **ReactJS**, **Next.js**, **TailwindCSS**, and **MongoDB**, this project provides a seamless way to create, manage, and participate in polls.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Admin Panel
+1. **Authentication**:
+   - Secure login system implemented using **JWT** and **secure cookies**.
+   - Admins must log in to access the dashboard.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. **Create a Poll**:
+   - A form allows admins to set a **vote title** and add multiple options for voting.
+   - New options can be added dynamically using the **Add Option** button.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+3. **Start a Poll**:
+   - Once the poll is ready, the **Start Poll** button makes the poll live and accessible to users.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. **View Results**:
+   - Admins can view real-time voting results displayed in percentages for each option.
 
-## Learn More
+### User Registration and Voting
+1. **User Registration**:
+   - Users can register with their **name** and **email** on the registration page.
+   - A unique voting link is sent to the user's registered email.
 
-To learn more about Next.js, take a look at the following resources:
+2. **Voting**:
+   - Users can vote through the unique link they receive via email.
+   - Each user is restricted to voting **once** to ensure fairness.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Tech Stack
+- **Frontend**: ReactJS, Next.js, TailwindCSS
+- **Backend**: Node.js, Express
+- **Database**: MongoDB
+- **Authentication**: JWT, Secure Cookies
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Installation
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/x-vote-vault.git
+   cd x-vote-vault
