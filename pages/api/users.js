@@ -42,7 +42,7 @@ const handler = async (req, res) => {
 
             let NewAgent = await newAgent.save();
 
-            await fetch("https://script.google.com/macros/s/AKfycbytua8Evb3w1ezP98G_AWLlpisOkkrznzpqSuWFtoaMyQAsd75w3LOFvaPgh6hobt4YDg/exec", {
+            await fetch(process.env.APPSCRIPT, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(
@@ -50,7 +50,7 @@ const handler = async (req, res) => {
                         Agent_ID: NewAgent.Agent_ID,
                         Agent_Name: req.body.Agent_Name,
                         Agent_Email: req.body.Agent_Email,
-                        link: `http://localhost:3000/uservote/vote?id=${NewAgent._id}`
+                        link: `https://x-votevault.vercel.app/uservote/vote?id=${NewAgent._id}`
                     }
 
                 )
