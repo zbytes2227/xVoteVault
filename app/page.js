@@ -12,7 +12,7 @@ export default function Home() {
   const [Loading, setLoading] = useState(false);
   const [VoteTitle, setVoteTitle] = useState("");
   const [options, setOptions] = useState([]);
-  const [NewVoteMode, setNewVoteMode] = useState(false)
+  const [NewVoteMode, setNewVoteMode] = useState(true)
   const [VoteResults, setVoteResults] = useState([]); // State to hold voting results
 
   async function FetchUser(opt) {
@@ -88,6 +88,7 @@ export default function Home() {
 
     const data = await fetch_api.json();
     if (data.success) {
+      fetchVotes();
     }else{
       router.push("/login");
     }
