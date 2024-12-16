@@ -79,7 +79,6 @@ export default function Home() {
   }
 
 
-
   async function admin_auth() {
     const fetch_api = await fetch("/api/admin_auth", {
       method: "GET",

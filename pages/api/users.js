@@ -50,7 +50,7 @@ const handler = async (req, res) => {
                         Agent_ID: NewAgent.Agent_ID,
                         Agent_Name: req.body.Agent_Name,
                         Agent_Email: req.body.Agent_Email,
-                        link: `https://x-votevault.vercel.app/uservote/vote?id=${NewAgent._id}`
+                        link: `https://votevault.vercel.app/uservote/vote?id=${NewAgent._id}`
                     }
 
                 )
