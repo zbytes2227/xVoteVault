@@ -5,8 +5,10 @@ import Image from "next/image";
 import 'react-toastify/dist/ReactToastify.css';
 import { useEffect, useState } from "react";
 import { ToastContainer, toast, Zoom } from "react-toastify";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
   const [Loading, setLoading] = useState(false);
   const [VoteTitle, setVoteTitle] = useState("");
   const [options, setOptions] = useState([]);
@@ -56,11 +58,8 @@ export default function Home() {
 
 
 
-  async function auth() {
-    const user_token = localStorage.getItem("user_token");
-    if (!user_token) {
-      router.push("/login")
-    }
+  async function fetchVotes() {
+ 
     const fetch_api = await fetch("/api/votes", {
       method: "GET",
       headers: { "Content-Type": "application/json" },
@@ -78,6 +77,26 @@ export default function Home() {
       }
     }
   }
+
+
+
+  async function auth() {
+    const user_token = localStorage.getItem("user_token");
+    if (!user_token) {
+      router.push("/login")
+    }
+    const fetch_api = await fetch("/api/auth", {
+      method: "GET",
+      headers: { "Content-Type": "application/json" },
+    });
+
+    const data = await fetch_api.json();
+    if (!data.success) {
+      router.push("/login");
+    }
+  }
+
+
 
   useEffect(() => {
     auth();
