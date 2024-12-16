@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const TopBar = ({ heading }) => {
+const TopBar = () => {
     const [UiState, setUiState] = useState(0)
     const [Notification, setNotification] = useState('MADE BY UJJWAL KUSHWAHA')
 
@@ -18,7 +18,7 @@ const TopBar = ({ heading }) => {
                             alt="Loading Logo"
                         />
                         <span className="self-center text-2xl font-semibold whitespace-nowrap drk:text-white">
-                            {heading ? heading : "X Vote Vault"}
+                            X Vote Vault
                         </span>
                     </div>
                     {/* <button

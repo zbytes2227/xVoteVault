@@ -80,27 +80,24 @@ export default function Home() {
 
 
 
-  async function auth() {
-    const user_token = localStorage.getItem("user_token");
-    if (!user_token) {
-      router.push("/login")
-    }
-    const fetch_api = await fetch("/api/auth", {
+  async function admin_auth() {
+    const fetch_api = await fetch("/api/admin_auth", {
       method: "GET",
       headers: { "Content-Type": "application/json" },
     });
 
     const data = await fetch_api.json();
-    if (!data.success) {
+    if (data.success) {
+    }else{
       router.push("/login");
     }
   }
 
-
-
   useEffect(() => {
-    auth();
+    admin_auth();
   }, [])
+
+  
 
   function NOTIFY(response) {
     let sign = "❌";
