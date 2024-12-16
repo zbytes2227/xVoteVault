@@ -118,16 +118,17 @@ export default function Home() {
   }
 
   async function AddVote() {
-
+    setLoading(true);
     const fetch_api = await fetch("/api/votes", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ VoteTitle: VoteTitle, options: options })
-
+      
     });
-
+    
     const data = await fetch_api.json();
     NOTIFY(data);
+    setLoading(false);
 
   }
 
@@ -274,7 +275,7 @@ export default function Home() {
                 onClick={AddVote}
                 className="w-full text-white bg-blue-500 hover:bg-blue-600 font-medium rounded-lg text-md px-5 mt-4 py-2.5 text-center drk:bg-blue-600 drk:hover:bg-blue-700 drk:focus:ring-blue-800"
               >
-                START VOTE POLL
+               { Loading ? "PLEASE WAIT":"START VOTE POLL"}
               </button>
             )}
 
