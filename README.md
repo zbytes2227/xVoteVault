@@ -8,25 +8,30 @@ X Vote Vault is a web application designed to simplify and secure the voting pro
 1. **Authentication**:
    - Secure login system implemented using **JWT** and **secure cookies**.
    - Admins must log in to access the dashboard.
+![image](https://github.com/user-attachments/assets/e4612123-1c79-4191-a5bb-8c340b2654b1)
 
 2. **Create a Poll**:
    - A form allows admins to set a **vote title** and add multiple options for voting.
    - New options can be added dynamically using the **Add Option** button.
+![image](https://github.com/user-attachments/assets/76b1a2b9-ff93-4791-913f-f7182e5280e6)
 
 3. **Start a Poll**:
    - Once the poll is ready, the **Start Poll** button makes the poll live and accessible to users.
 
 4. **View Results**:
    - Admins can view real-time voting results displayed in percentages for each option.
+![image](https://github.com/user-attachments/assets/20bf8323-b706-4cea-ab02-98dc8d106952)
 
 ### User Registration and Voting
 1. **User Registration**:
    - Users can register with their **name** and **email** on the registration page.
    - A unique voting link is sent to the user's registered email.
+![image](https://github.com/user-attachments/assets/fcfa6385-4249-45d4-a92d-42976e00df95)
 
 2. **Voting**:
    - Users can vote through the unique link they receive via email.
    - Each user is restricted to voting **once** to ensure fairness.
+![image](https://github.com/user-attachments/assets/f20f21ef-c3a2-429e-a9d7-664ce3130b22)
 
 ## Project Tech Stack
 - **Frontend**: ReactJS, Next.js, TailwindCSS
@@ -34,9 +39,4 @@ X Vote Vault is a web application designed to simplify and secure the voting pro
 - **Database**: MongoDB
 - **Authentication**: JWT, Secure Cookies
 
-## Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/x-vote-vault.git
-   cd x-vote-vault
+ 
