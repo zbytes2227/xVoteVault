@@ -122,7 +122,7 @@ const Login = () => {
               <form onSubmit={(e) => { e.preventDefault(); LogIn() }} className="space-y-4 md:space-y-6" action="#">
                 <div>
                   <label htmlFor="contact" className="block mb-2 text-sm font-medium text-gray-900 drk:text-white">Enter Name</label>
-                  <input value={UserName} onChange={(e) => setUserName(e.target.value)} type="tel" name="contact" id="contact" className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg outline-none focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 drk:bg-gray-700 drk:border-gray-600 drk:placeholder-gray-400 drk:text-white drk:focus:ring-blue-500 drk:focus:border-blue-500" placeholder="Enter Name" required="" />
+                  <input value={UserName} onChange={(e) => setUserName(e.target.value)} type="text" name="contact" id="contact" className="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg outline-none focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 drk:bg-gray-700 drk:border-gray-600 drk:placeholder-gray-400 drk:text-white drk:focus:ring-blue-500 drk:focus:border-blue-500" placeholder="Enter Name" required="" />
                 </div>
                 <div>
                   <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 drk:text-white">Enter Your Email</label>
